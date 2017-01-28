@@ -40,3 +40,25 @@ function findLongestWord(str) {
   return word.length;
 }
 console.log(findLongestWord("The quick brown fox jumped over the lazy dog"));
+
+
+// Largest of Four
+
+function largestOfFour(arr) {
+	// use two nested for loops to iterate through each array in the set
+  for (i = 0; i < arr.length; i++) {
+  // use a blank variable to capture the larger of each a/b comparison as it iterates
+  	var largest = 0;
+  	for (j = 0; j < arr[i].length; j++) {
+      if (arr[i][j] > largest) {
+      	largest = arr[i][j];
+      }
+    }
+    // at the end of each array, set arr[i] to the value of the largest number
+    arr[i] = largest;
+    // repeat on the next array in the set until all arrays have been changed
+  }
+  return arr;
+}
+
+console.log(largestOfFour([[4, 5, 1, 3], [13, 27, 18, 26], [32, 35, 37, 39], [1000, 1001, 857, 1]]));
