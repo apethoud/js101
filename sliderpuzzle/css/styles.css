@@ -1,0 +1,20 @@
+body {
+  background-color: maroon;
+}
+
+.square {
+  padding: 5px;
+}
+
+.tile {
+  background-color: tan;
+  height: 200px;
+}
+
+.number {
+  font-size: 80px;
+}
+
+.invisible {
+  display: none;
+}
