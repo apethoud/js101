@@ -12,6 +12,7 @@ body {
 }
 
 .number {
+  pointer-events: none;
   font-size: 80px;
 }
 
