@@ -1,4 +1,7 @@
 var tileGrid = document.querySelector('.tile-grid');
+var victoryText = document.querySelector('.victory');
+var numberList = ['1','2','3','4','5','6','7','8'];
+
 var squareOne = document.querySelector('#s1');
 var squareTwo = document.querySelector('#s2');
 var squareThree = document.querySelector('#s3');
@@ -8,7 +11,6 @@ var squareSix = document.querySelector('#s6');
 var squareSeven = document.querySelector('#s7');
 var squareEight = document.querySelector('#s8');
 var squareNine = document.querySelector('#s9');
-var victoryText = document.querySelector('.victory');
 
 function switchTiles(a,b){
   var numberInA = a.firstElementChild.textContent;
@@ -17,6 +19,17 @@ function switchTiles(a,b){
   a.firstElementChild.textContent = "";
   a.classList.toggle('invisible');
   b.classList.toggle('invisible');
+}
+
+function randomizeOrder(){
+  var len = numberList.length;
+
+  for(i = len - 1; i > 0; i--){
+    var j = Math.floor(Math.random() * (i + 1));
+    var temp = numberList[i];
+    numberList[i] = numberList[j];
+    numberList[j] = temp;
+  }
 }
 
 tileGrid.addEventListener('click', function(e){
