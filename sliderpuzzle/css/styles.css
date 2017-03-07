@@ -2,19 +2,79 @@ body {
   background-color: maroon;
 }
 
-.square {
-  padding: 5px;
+/* HEADER SECTION */
+.header-text {
+  color: tan;
 }
 
-.tile {
-  background-color: tan;
-  height: 200px;
+.hidden {
+  visibility: hidden;
+}
+
+#victory, #new-game {
+  height: 100px;
+  color: #29ABE2;
+}
+
+#new-game {
+  margin: 0 auto;
+}
+
+.glow {
+  box-shadow: 0 0 25px 5px #29ABE2;
+}
+
+/* TILE GRID */
+
+.tile-grid {
+  width: 75%;
+  padding-bottom: 75%;
+  margin: 0 auto;
+  margin-bottom: 50px;
+}
+
+.square {
+  float: left;
+  width: 32%;
+  margin: 0.6666%;
+  padding-bottom: 32%;
+  background-color: yellow;
 }
 
 .number {
-  font-size: 80px;
+  pointer-events: none;
+  position: absolute;
+  padding-left: 9.9%;
+  padding-top: 5.7%;
+  /*font-size: 48px;*/
+  font-size: 9vw;
+  /* Adjust the font size and padding for different screen sizes */
+}
+
+@media only screen and (min-width: 512px) {
+  .tile-grid {
+    width: 37.5%;
+    padding-bottom: 37.5%;
+  }
+  .number {
+    padding-left: 4.95%;
+    padding-top: 2.85%;
+    font-size: 4.5vw;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .tile-grid {
+    width: 25%;
+    padding-bottom: 25%;
+  }
+  .number {
+    padding-left: 3.3%;
+    padding-top: 1.9%;
+    font-size: 3vw;
+  }
 }
 
 .invisible {
-  display: none;
+  visibility: hidden;
 }
