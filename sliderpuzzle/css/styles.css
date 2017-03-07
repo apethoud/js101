@@ -1,10 +1,24 @@
+@import url('https://fonts.googleapis.com/css?family=Lato|Patua+One');
+
 body {
-  background-color: maroon;
+  background-color: #060A29;
 }
 
 /* HEADER SECTION */
 .header-text {
-  color: tan;
+  color: #F0F0F0;
+}
+
+.header-text h1 {
+  font-family: 'Patua One', cursive;
+}
+
+.header-text p {
+  font-family: 'Lato', sans-serif;
+}
+
+#victory-text {
+  font-family: 'Patua One', cursive;
 }
 
 .hidden {
@@ -13,7 +27,7 @@ body {
 
 #victory, #new-game {
   height: 100px;
-  color: #29ABE2;
+  color: #D9BD5F;
 }
 
 #new-game {
@@ -21,7 +35,7 @@ body {
 }
 
 .glow {
-  box-shadow: 0 0 25px 5px #29ABE2;
+  box-shadow: 0 0 25px 5px #D9BD5F;
 }
 
 /* TILE GRID */
@@ -38,12 +52,13 @@ body {
   width: 32%;
   margin: 0.6666%;
   padding-bottom: 32%;
-  background-color: yellow;
+  background-color: #FFCA14;
 }
 
 .number {
   pointer-events: none;
   position: absolute;
+  color: #32354F;
   padding-left: 9.9%;
   padding-top: 5.7%;
   /*font-size: 48px;*/
